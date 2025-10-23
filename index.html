@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -92,12 +93,11 @@
             font-size: 1.5rem;
             font-weight: 800;
             color: white;
-
         }
 
         .logo-subtitle {
             font-size: 0.75rem;
-            color: var(--white);
+            color: var(--gray);
             font-weight: 500;
         }
 
@@ -137,7 +137,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #6C63FF 0%, #36D1DC 100%);
-            color: light;
+            color: white;
             padding: 140px 0 100px;
             text-align: center;
             position: relative;
@@ -162,15 +162,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 100%;
-            filter: blur(6px);
+            opacity: 0.8;
             z-index: 0;
         }
 
         .hero-element {
             position: absolute;
             font-size: 4rem;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .hero-element:nth-child(1) {
@@ -411,6 +410,17 @@
             text-align: center;
         }
 
+        .stats .section-title h2 {
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+
+        .stats .section-title p {
+            color: white;
+            opacity: 0.9;
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -589,9 +599,13 @@
 
         .testimonials .section-title h2 {
             color: white;
-            background: linear-gradient(135deg, #ffffff, #e6f7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+
+        .testimonials .section-title p {
+            color: white;
+            opacity: 0.9;
         }
 
         .testimonials-grid {
@@ -1099,29 +1113,29 @@
             <div class="screenshots-grid">
                 <div class="screenshot-card">
                     <div class="screenshot-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Главный экран приложения">
+                        <img src="https://images.unsplash.com/photo-1588072432836-e100327d50a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Учебные материалы">
                     </div>
                     <div class="screenshot-content">
-                        <h3>Персонализированная лента</h3>
-                        <p>Умная система рекомендует материалы на основе ваших предпочтений и предметной области</p>
+                        <h3>Библиотека учебных материалов</h3>
+                        <p>Доступ к тысячам методических разработок, конспектов и учебных пособий</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
                     <div class="screenshot-image">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Библиотека материалов">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1122&q=80" alt="Планирование уроков">
                     </div>
                     <div class="screenshot-content">
-                        <h3>Обширная библиотека</h3>
-                        <p>Быстрый доступ к тысячам методических материалов, отсортированных по категориям</p>
+                        <h3>Планирование уроков</h3>
+                        <p>Инструменты для создания и организации учебных планов и расписаний</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
                     <div class="screenshot-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Аналитика и отчеты">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Аналитика успеваемости">
                     </div>
                     <div class="screenshot-content">
-                        <h3>Детальная аналитика</h3>
-                        <p>Визуализация данных об успеваемости и автоматическое формирование отчетов</p>
+                        <h3>Аналитика успеваемости</h3>
+                        <p>Детальная статистика и визуализация образовательных результатов учащихся</p>
                     </div>
                 </div>
             </div>
@@ -1458,3 +1472,4 @@
     </script>
 </body>
 </html>
+```
