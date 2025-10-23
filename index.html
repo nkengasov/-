@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -20,7 +19,7 @@
             --success: #4CD964;
             --warning: #FF9500;
             --card-bg: #FFFFFF;
-            --border-radius: 16px;
+            --border-radius: 24px;
             --shadow: 0 10px 30px rgba(108, 99, 255, 0.15);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -57,6 +56,7 @@
             top: 0;
             z-index: 1000;
             transition: var(--transition);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
         }
 
         .header-content {
@@ -92,7 +92,9 @@
         .logo-text {
             font-size: 1.5rem;
             font-weight: 800;
-            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .logo-subtitle {
@@ -142,6 +144,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            border-radius: var(--border-radius);
+            margin: 0 20px 20px 20px;
         }
 
         .hero::before {
@@ -293,6 +297,8 @@
         .features {
             padding: 120px 0;
             background-color: var(--light);
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .section-title {
@@ -408,6 +414,8 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .stats .section-title h2 {
@@ -454,6 +462,8 @@
         .app-showcase {
             padding: 120px 0;
             background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .showcase-container {
@@ -528,6 +538,8 @@
         .screenshots {
             padding: 100px 0;
             background-color: var(--light);
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .screenshots-grid {
@@ -558,7 +570,7 @@
         }
 
         .screenshot-image {
-            height: 500px;
+            height: 400px;
             background: linear-gradient(135deg, var(--primary-light), var(--accent));
             display: flex;
             align-items: center;
@@ -595,6 +607,8 @@
             padding: 100px 0;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .testimonials .section-title h2 {
@@ -672,6 +686,8 @@
         .faq {
             padding: 120px 0;
             background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .faq-container {
@@ -736,6 +752,8 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
+            border-radius: var(--border-radius);
+            margin: 20px;
         }
 
         .download-content {
@@ -784,6 +802,8 @@
             background-color: var(--dark);
             color: white;
             padding: 80px 0 30px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            margin: 20px 20px 0 20px;
         }
 
         .footer-content {
@@ -874,6 +894,10 @@
                 order: -1;
                 transform: translateY(30px);
             }
+            
+            .hero, .features, .stats, .app-showcase, .screenshots, .testimonials, .faq, .download, footer {
+                margin: 10px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -930,6 +954,11 @@
             
             .hero-element {
                 font-size: 2.5rem;
+            }
+            
+            .hero, .features, .stats, .app-showcase, .screenshots, .testimonials, .faq, .download, footer {
+                margin: 5px;
+                border-radius: 16px;
             }
         }
     </style>
@@ -1113,7 +1142,7 @@
             <div class="screenshots-grid">
                 <div class="screenshot-card">
                     <div class="screenshot-image">
-                        <img src="https://images.unsplash.com/photo-1588072432836-e100327d50a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Учебные материалы">
+                        <img src="https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?w=1380&t=st=1700000000~exp=1700000600~hmac=abc123" alt="Образовательные материалы">
                     </div>
                     <div class="screenshot-content">
                         <h3>Библиотека учебных материалов</h3>
@@ -1122,20 +1151,20 @@
                 </div>
                 <div class="screenshot-card">
                     <div class="screenshot-image">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1122&q=80" alt="Планирование уроков">
+                        <img src="https://static.vecteezy.com/system/resources/previews/023/608/557/non_2x/ai-generated-back-to-school-background-with-school-supplies-free-photo.jpg" alt="Учебный процесс">
                     </div>
                     <div class="screenshot-content">
-                        <h3>Планирование уроков</h3>
-                        <p>Инструменты для создания и организации учебных планов и расписаний</p>
+                        <h3>Интерактивное обучение</h3>
+                        <p>Современные инструменты для вовлечения учащихся в образовательный процесс</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
                     <div class="screenshot-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Аналитика успеваемости">
+                        <img src="https://media.istockphoto.com/id/1369150014/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%88%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D0%B8%D1%8F-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D0%B8-%D1%88%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2.jpg?s=1024x1024&w=is&k=20&c=abc123" alt="Онлайн образование">
                     </div>
                     <div class="screenshot-content">
-                        <h3>Аналитика успеваемости</h3>
-                        <p>Детальная статистика и визуализация образовательных результатов учащихся</p>
+                        <h3>Онлайн-платформа</h3>
+                        <p>Доступ к образовательным ресурсам в любое время и в любом месте</p>
                     </div>
                 </div>
             </div>
@@ -1472,4 +1501,3 @@
     </script>
 </body>
 </html>
-```
