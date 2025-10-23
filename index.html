@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduCare Pro | Ваш цифровой помощник в образовании</title>
+    <title>EduCare Pro | Цифровая образовательная платформа</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #7209b7;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #4cc9f0;
+            --teacher: #4895ef;
+            --educator: #560bad;
+            --ai: #b5179e;
+            --border-radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        :root {
-            --primary: #4e54c8;
-            --secondary: #8f94fb;
-            --accent: #ff7e5f;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --success: #28a745;
-            --warning: #ffc107;
-            --teacher: #6a89cc;
-            --educator: #4a69bd;
-            --ai: #78e08f;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: #f5f7ff;
+            background-color: #ffffff;
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -42,13 +47,15 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            color: var(--dark);
             padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: var(--transition);
         }
 
         .header-content {
@@ -64,31 +71,35 @@
         }
 
         .logo-icon {
-            font-size: 2.5rem;
-            background: white;
-            color: var(--primary);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s ease;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
 
         .logo:hover .logo-icon {
-            transform: rotate(15deg) scale(1.1);
+            transform: rotate(10deg) scale(1.05);
         }
 
         .logo-text {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .logo-subtitle {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-weight: 500;
         }
 
         nav ul {
@@ -98,53 +109,40 @@
         }
 
         nav a {
-            color: white;
+            color: var(--dark);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             padding: 8px 12px;
-            border-radius: 4px;
+            border-radius: 8px;
             position: relative;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: white;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
+        nav a:hover {
+            color: var(--primary);
+            background: rgba(67, 97, 238, 0.05);
         }
 
-        nav a:hover::after {
-            width: 80%;
+        nav a.active {
+            color: var(--primary);
+            font-weight: 600;
         }
 
         .mobile-menu {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--dark);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(-45deg, #4e54c8, #8f94fb, #6a89cc, #4a69bd);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
             color: white;
-            padding: 100px 0;
+            padding: 120px 0 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .hero::before {
@@ -154,7 +152,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,261.3C672,256,768,224,864,213.3C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,261.3C672,256,768,224,864,213.3C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
             background-size: cover;
             background-position: bottom;
         }
@@ -167,7 +165,7 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             margin-bottom: 20px;
             font-weight: 800;
             opacity: 0;
@@ -176,7 +174,7 @@
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 40px;
             opacity: 0.9;
             opacity: 0;
@@ -192,16 +190,18 @@
         }
 
         .cta-button {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background-color: var(--accent);
             color: white;
-            padding: 18px 40px;
-            font-size: 1.2rem;
+            padding: 16px 36px;
+            font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(255, 126, 95, 0.4);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(247, 37, 133, 0.4);
+            transition: var(--transition);
             margin-bottom: 20px;
             opacity: 0;
             transform: translateY(30px);
@@ -210,7 +210,7 @@
 
         .cta-button:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 25px rgba(255, 126, 95, 0.5);
+            box-shadow: 0 12px 25px rgba(247, 37, 133, 0.5);
         }
 
         .app-badge {
@@ -224,26 +224,26 @@
         }
 
         .badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
             border-radius: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
             font-weight: 500;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .badge:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.25);
         }
 
         /* Features Section */
         .features {
             padding: 100px 0;
-            background-color: white;
+            background-color: var(--light);
         }
 
         .section-title {
@@ -253,13 +253,14 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--dark);
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .section-title p {
-            font-size: 1.2rem;
-            color: var(--dark);
+            font-size: 1.1rem;
+            color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
         }
@@ -274,11 +275,23 @@
             background: white;
             border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
             border: 1px solid rgba(0, 0, 0, 0.05);
             opacity: 0;
             transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
         }
 
         .feature-card.visible {
@@ -292,45 +305,38 @@
         }
 
         .feature-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 20px;
-            transition: all 0.5s ease;
+            transition: var(--transition);
+            color: white;
+        }
+
+        .educator-icon {
+            background: linear-gradient(135deg, var(--teacher), #3f37c9);
+        }
+
+        .teacher-icon {
+            background: linear-gradient(135deg, var(--educator), #7209b7);
+        }
+
+        .subject-icon {
+            background: linear-gradient(135deg, var(--ai), #f72585);
         }
 
         .feature-card:hover .feature-icon {
             transform: scale(1.1) rotate(5deg);
         }
 
-        .educator-icon {
-            background: rgba(106, 137, 204, 0.2);
-            color: var(--teacher);
-        }
-
-        .teacher-icon {
-            background: rgba(74, 105, 189, 0.2);
-            color: var(--educator);
-        }
-
-        .subject-icon {
-            background: rgba(120, 224, 143, 0.2);
-            color: var(--ai);
-        }
-
-        .ai-icon {
-            background: rgba(255, 126, 95, 0.2);
-            color: var(--accent);
-        }
-
         .feature-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
-            color: var(--primary);
+            color: var(--dark);
         }
 
         .feature-list {
@@ -341,7 +347,7 @@
             margin-bottom: 10px;
             padding-left: 25px;
             position: relative;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .feature-list li:hover {
@@ -359,7 +365,7 @@
         /* Stats Section */
         .stats {
             padding: 80px 0;
-            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-align: center;
         }
@@ -382,21 +388,21 @@
         }
 
         .stat-number {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             margin-bottom: 10px;
             display: block;
         }
 
         .stat-label {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
         }
 
         /* AI Section */
         .ai-section {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #7209b7 0%, #b5179e 100%);
             color: white;
             text-align: center;
         }
@@ -413,11 +419,11 @@
         }
 
         .ai-feature {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 30px;
             border-radius: 16px;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             opacity: 0;
             transform: translateY(30px);
         }
@@ -429,13 +435,13 @@
 
         .ai-feature:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .ai-feature i {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            transition: all 0.5s ease;
+            transition: var(--transition);
         }
 
         .ai-feature:hover i {
@@ -445,7 +451,7 @@
         /* Gallery Section */
         .gallery {
             padding: 100px 0;
-            background-color: var(--light);
+            background-color: white;
         }
 
         .gallery-container {
@@ -457,7 +463,7 @@
         .gallery-main {
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             background: white;
             padding: 20px;
@@ -483,7 +489,7 @@
             overflow: hidden;
             cursor: pointer;
             opacity: 0.7;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             border: 3px solid transparent;
         }
 
@@ -510,8 +516,8 @@
             padding: 30px;
             background: white;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
             opacity: 0;
             transform: translateY(30px);
         }
@@ -527,10 +533,12 @@
         }
 
         .interface-feature i {
-            font-size: 3rem;
-            color: var(--primary);
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
-            transition: all 0.5s ease;
+            transition: var(--transition);
         }
 
         .interface-feature:hover i {
@@ -540,7 +548,7 @@
         /* FAQ Section */
         .faq {
             padding: 100px 0;
-            background-color: white;
+            background-color: var(--light);
         }
 
         .faq-container {
@@ -552,7 +560,7 @@
             margin-bottom: 15px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow);
             border: 1px solid rgba(0, 0, 0, 0.05);
             opacity: 0;
             transform: translateY(20px);
@@ -565,17 +573,17 @@
 
         .faq-question {
             padding: 20px 25px;
-            background: var(--light);
+            background: white;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .faq-question:hover {
-            background: #e9ecef;
+            background: #f1f3f5;
         }
 
         .faq-question i {
@@ -591,6 +599,7 @@
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
+            background: white;
         }
 
         .faq-answer.active {
@@ -601,7 +610,7 @@
         /* Knowledge Base */
         .knowledge {
             padding: 100px 0;
-            background-color: var(--light);
+            background-color: white;
         }
 
         .knowledge-grid {
@@ -615,8 +624,8 @@
             background: white;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
             opacity: 0;
             transform: translateY(30px);
         }
@@ -648,12 +657,12 @@
         .knowledge-content h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--primary);
+            color: var(--dark);
         }
 
         .knowledge-content p {
             margin-bottom: 20px;
-            color: #666;
+            color: var(--gray);
         }
 
         .knowledge-link {
@@ -663,7 +672,7 @@
             color: var(--primary);
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .knowledge-link:hover {
@@ -759,7 +768,7 @@
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .footer-links a:hover {
@@ -782,7 +791,7 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: white;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .social-links a:hover {
@@ -801,7 +810,7 @@
         /* Responsive */
         @media (max-width: 992px) {
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
             nav ul {
@@ -821,11 +830,11 @@
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .download-stats {
@@ -870,7 +879,7 @@
                     </div>
                     <div>
                         <div class="logo-text">EduCare Pro</div>
-                        <div class="logo-subtitle">Образовательная платформа</div>
+                        <div class="logo-subtitle">Цифровая образовательная платформа</div>
                     </div>
                 </div>
                 <div class="mobile-menu">
@@ -878,11 +887,11 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#features" class="active">Возможности</a></li>
                         <li><a href="#stats">Преимущества</a></li>
+                        <li><a href="#ai">ИИ-помощник</a></li>
                         <li><a href="#gallery">Интерфейс</a></li>
                         <li><a href="#faq">Вопросы</a></li>
-                        <li><a href="#knowledge">База знаний</a></li>
                         <li><a href="#download">Скачать</a></li>
                     </ul>
                 </nav>
@@ -894,8 +903,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Ваш цифровой помощник в образовании</h1>
-                <p>Все необходимое для воспитателей и учителей в одном приложении: методички, планы уроков, сценарии праздников и умный ИИ-помощник</p>
+                <h1>Инновационная платформа для педагогов</h1>
+                <p>Объединяем передовые технологии и педагогический опыт для создания эффективной образовательной среды</p>
                 <a href="Педагог 24.7 v4.5.apk" class="cta-button" download="EduCare_Pro_v4.5.apk">
                     <i class="fas fa-download"></i> Скачать APK
                 </a>
@@ -1037,20 +1046,20 @@
             
             <div class="gallery-container">
                 <div class="gallery-main">
-                    <img src="https://via.placeholder.com/800x450/4e54c8/ffffff?text=Главный+экран+EduCare+Pro" alt="Главный экран" id="gallery-main">
+                    <img src="https://via.placeholder.com/800x450/4361ee/ffffff?text=Главный+экран+EduCare+Pro" alt="Главный экран" id="gallery-main">
                 </div>
                 <div class="gallery-thumbs">
-                    <div class="gallery-thumb active" data-image="https://via.placeholder.com/800x450/4e54c8/ffffff?text=Главный+экран+EduCare+Pro">
-                        <img src="https://via.placeholder.com/100x56/4e54c8/ffffff?text=1" alt="Главный экран">
+                    <div class="gallery-thumb active" data-image="https://via.placeholder.com/800x450/4361ee/ffffff?text=Главный+экран+EduCare+Pro">
+                        <img src="https://via.placeholder.com/100x56/4361ee/ffffff?text=1" alt="Главный экран">
                     </div>
-                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/8f94fb/ffffff?text=Библиотека+материалов">
-                        <img src="https://via.placeholder.com/100x56/8f94fb/ffffff?text=2" alt="Библиотека материалов">
+                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/7209b7/ffffff?text=Библиотека+материалов">
+                        <img src="https://via.placeholder.com/100x56/7209b7/ffffff?text=2" alt="Библиотека материалов">
                     </div>
-                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/ff7e5f/ffffff?text=ИИ+помощник">
-                        <img src="https://via.placeholder.com/100x56/ff7e5f/ffffff?text=3" alt="ИИ помощник">
+                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/f72585/ffffff?text=ИИ+помощник">
+                        <img src="https://via.placeholder.com/100x56/f72585/ffffff?text=3" alt="ИИ помощник">
                     </div>
-                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/6a89cc/ffffff?text=Планы+и+конспекты">
-                        <img src="https://via.placeholder.com/100x56/6a89cc/ffffff?text=4" alt="Планы и конспекты">
+                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/4895ef/ffffff?text=Планы+и+конспекты">
+                        <img src="https://via.placeholder.com/100x56/4895ef/ffffff?text=4" alt="Планы и конспекты">
                     </div>
                 </div>
             </div>
@@ -1177,15 +1186,15 @@
                 <h2>Скачайте EduCare Pro бесплатно</h2>
                 <p>Присоединяйтесь к тысячам педагогов, которые уже используют наше приложение в своей работе</p>
                 <a href="Педагог 24.7 v4.5.apk" class="cta-button" download="EduCare_Pro_v4.5.apk">
-                    <i class="fas fa-download"></i> Скачать APK (v2.7)
+                    <i class="fas fa-download"></i> Скачать APK (v4.5)
                 </a>
                 <div class="download-stats">
                     <div class="stat">
-                        <div class="stat-number">10K+</div>
+                        <div class="stat-number">12K+</div>
                         <div class="stat-label">Педагогов</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">5K+</div>
+                        <div class="stat-number">1.5K+</div>
                         <div class="stat-label">Материалов</div>
                     </div>
                     <div class="stat">
@@ -1216,9 +1225,9 @@
                     <ul class="footer-links">
                         <li><a href="#features">Возможности</a></li>
                         <li><a href="#stats">Преимущества</a></li>
+                        <li><a href="#ai">ИИ-помощник</a></li>
                         <li><a href="#gallery">Интерфейс</a></li>
                         <li><a href="#faq">Вопросы</a></li>
-                        <li><a href="#knowledge">База знаний</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
