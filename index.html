@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduCare Pro | Цифровая образовательная платформа</title>
+    <title>Образовательный Хаб | Платформа для современных педагогов</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4361ee;
-            --primary-dark: #3a56d4;
-            --secondary: #7209b7;
-            --accent: #f72585;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --gray: #6c757d;
-            --success: #4cc9f0;
-            --teacher: #4895ef;
-            --educator: #560bad;
-            --ai: #b5179e;
-            --border-radius: 12px;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s ease;
+            --primary: #6C63FF;
+            --primary-light: #8A84FF;
+            --primary-dark: #5752D4;
+            --secondary: #FF6584;
+            --accent: #36D1DC;
+            --light: #F8F9FF;
+            --dark: #2D2B55;
+            --gray: #6C757D;
+            --success: #4CD964;
+            --warning: #FF9500;
+            --card-bg: #FFFFFF;
+            --border-radius: 16px;
+            --shadow: 0 10px 30px rgba(108, 99, 255, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         * {
@@ -32,7 +32,7 @@
         }
 
         body {
-            background-color: #ffffff;
+            background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -50,8 +50,8 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             color: var(--dark);
-            padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 18px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -67,15 +67,15 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .logo-icon {
-            font-size: 2.2rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -89,15 +89,15 @@
         }
 
         .logo-text {
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .logo-subtitle {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--gray);
             font-weight: 500;
         }
@@ -105,7 +105,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 28px;
         }
 
         nav a {
@@ -113,14 +113,14 @@
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
-            padding: 8px 12px;
+            padding: 8px 16px;
             border-radius: 8px;
             position: relative;
         }
 
         nav a:hover {
             color: var(--primary);
-            background: rgba(67, 97, 238, 0.05);
+            background: rgba(108, 99, 255, 0.05);
         }
 
         nav a.active {
@@ -137,9 +137,9 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            background: linear-gradient(135deg, #6C63FF 0%, #36D1DC 100%);
             color: white;
-            padding: 120px 0 100px;
+            padding: 140px 0 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -160,13 +160,13 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 24px;
             font-weight: 800;
             opacity: 0;
             transform: translateY(30px);
@@ -174,7 +174,7 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 40px;
             opacity: 0.9;
             opacity: 0;
@@ -192,15 +192,15 @@
         .cta-button {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background-color: var(--accent);
+            gap: 12px;
+            background-color: var(--secondary);
             color: white;
-            padding: 16px 36px;
+            padding: 18px 40px;
             font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(247, 37, 133, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 101, 132, 0.4);
             transition: var(--transition);
             margin-bottom: 20px;
             opacity: 0;
@@ -210,14 +210,14 @@
 
         .cta-button:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 25px rgba(247, 37, 133, 0.5);
+            box-shadow: 0 12px 25px rgba(255, 101, 132, 0.5);
         }
 
         .app-badge {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 40px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeUp 1s ease 0.9s forwards;
@@ -226,7 +226,7 @@
         .badge {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
-            padding: 12px 20px;
+            padding: 14px 24px;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -242,24 +242,24 @@
 
         /* Features Section */
         .features {
-            padding: 100px 0;
+            padding: 120px 0;
             background-color: var(--light);
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--dark);
-            margin-bottom: 15px;
-            font-weight: 700;
+            margin-bottom: 20px;
+            font-weight: 800;
         }
 
         .section-title p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
@@ -267,17 +267,17 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .feature-card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(108, 99, 255, 0.1);
             opacity: 0;
             transform: translateY(30px);
             position: relative;
@@ -291,7 +291,7 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
         }
 
         .feature-card.visible {
@@ -301,32 +301,21 @@
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
         }
 
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
             transition: var(--transition);
             color: white;
-        }
-
-        .educator-icon {
-            background: linear-gradient(135deg, var(--teacher), #3f37c9);
-        }
-
-        .teacher-icon {
-            background: linear-gradient(135deg, var(--educator), #7209b7);
-        }
-
-        .subject-icon {
-            background: linear-gradient(135deg, var(--ai), #f72585);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
         }
 
         .feature-card:hover .feature-icon {
@@ -334,8 +323,8 @@
         }
 
         .feature-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
             color: var(--dark);
         }
 
@@ -344,8 +333,8 @@
         }
 
         .feature-list li {
-            margin-bottom: 10px;
-            padding-left: 25px;
+            margin-bottom: 12px;
+            padding-left: 28px;
             position: relative;
             transition: var(--transition);
         }
@@ -364,17 +353,17 @@
 
         /* Stats Section */
         .stats {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 40px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
         .stat-item {
@@ -388,167 +377,230 @@
         }
 
         .stat-number {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: block;
         }
 
         .stat-label {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.9;
         }
 
-        /* AI Section */
-        .ai-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #7209b7 0%, #b5179e 100%);
-            color: white;
-            text-align: center;
+        /* App Showcase */
+        .app-showcase {
+            padding: 120px 0;
+            background-color: var(--card-bg);
         }
 
-        .ai-section .section-title h2 {
-            color: white;
-        }
-
-        .ai-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .ai-feature {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 16px;
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .ai-feature.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .ai-feature:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .ai-feature i {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            transition: var(--transition);
-        }
-
-        .ai-feature:hover i {
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 100px 0;
-            background-color: white;
-        }
-
-        .gallery-container {
-            position: relative;
-            max-width: 800px;
-            margin: 50px auto 0;
-        }
-
-        .gallery-main {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            background: white;
-            padding: 20px;
-        }
-
-        .gallery-main img {
-            width: 100%;
-            display: block;
-            border-radius: 12px;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-thumbs {
+        .showcase-container {
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 60px;
         }
 
-        .gallery-thumb {
-            width: 100px;
-            border-radius: 12px;
+        .showcase-content {
+            flex: 1;
+        }
+
+        .showcase-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .showcase-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .showcase-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .showcase-features li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .showcase-features li i {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .showcase-image {
+            flex: 1;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: var(--transition);
-            border: 3px solid transparent;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateX(30px);
         }
 
-        .gallery-thumb:hover, .gallery-thumb.active {
+        .showcase-image.visible {
             opacity: 1;
-            transform: translateY(-5px);
-            border-color: var(--primary);
+            transform: translateX(0);
         }
 
-        .gallery-thumb img {
+        .showcase-image img {
             width: 100%;
             display: block;
+            transition: var(--transition);
         }
 
-        .interface-features {
+        .showcase-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .screenshots-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
-        .interface-feature {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border-radius: 16px;
+        .screenshot-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
             opacity: 0;
             transform: translateY(30px);
         }
 
-        .interface-feature.visible {
+        .screenshot-card.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .interface-feature:hover {
+        .screenshot-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
         }
 
-        .interface-feature i {
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
+        .screenshot-image {
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshot-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .screenshot-content {
+            padding: 24px;
+        }
+
+        .screenshot-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .screenshot-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+        }
+
+        .testimonials .section-title h2 {
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: var(--border-radius);
             transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
         }
 
-        .interface-feature:hover i {
-            transform: scale(1.1) rotate(5deg);
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
         }
 
         /* FAQ Section */
         .faq {
-            padding: 100px 0;
-            background-color: var(--light);
+            padding: 120px 0;
+            background-color: var(--card-bg);
         }
 
         .faq-container {
@@ -557,11 +609,11 @@
         }
 
         .faq-item {
-            margin-bottom: 15px;
-            border-radius: 12px;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(108, 99, 255, 0.1);
             opacity: 0;
             transform: translateY(20px);
         }
@@ -572,8 +624,8 @@
         }
 
         .faq-question {
-            padding: 20px 25px;
-            background: white;
+            padding: 24px 30px;
+            background: var(--card-bg);
             font-weight: 600;
             cursor: pointer;
             display: flex;
@@ -583,7 +635,7 @@
         }
 
         .faq-question:hover {
-            background: #f1f3f5;
+            background: #f8f9ff;
         }
 
         .faq-question i {
@@ -595,95 +647,22 @@
         }
 
         .faq-answer {
-            padding: 0 25px;
+            padding: 0 30px;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
-            background: white;
+            background: var(--card-bg);
         }
 
         .faq-answer.active {
-            padding: 20px 25px;
+            padding: 0 30px 24px;
             max-height: 500px;
-        }
-
-        /* Knowledge Base */
-        .knowledge {
-            padding: 100px 0;
-            background-color: white;
-        }
-
-        .knowledge-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .knowledge-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .knowledge-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .knowledge-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .knowledge-image {
-            height: 180px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        .knowledge-content {
-            padding: 25px;
-        }
-
-        .knowledge-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .knowledge-content p {
-            margin-bottom: 20px;
-            color: var(--gray);
-        }
-
-        .knowledge-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .knowledge-link:hover {
-            gap: 12px;
-            color: var(--secondary);
         }
 
         /* Download Section */
         .download {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
         }
@@ -694,8 +673,8 @@
         }
 
         .download h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 24px;
         }
 
         .download p {
@@ -708,7 +687,7 @@
             display: flex;
             justify-content: center;
             gap: 50px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
         .stat {
@@ -716,13 +695,13 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .stat-label {
-            font-size: 1rem;
+            font-size: 1.1rem;
             opacity: 0.8;
         }
 
@@ -730,21 +709,21 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 70px 0 30px;
+            padding: 80px 0 30px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .footer-column h3 {
             font-size: 1.3rem;
             margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
 
         .footer-column h3::after {
@@ -762,7 +741,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .footer-links a {
@@ -786,8 +765,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: white;
@@ -810,11 +789,16 @@
         /* Responsive */
         @media (max-width: 992px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
-            nav ul {
-                gap: 15px;
+            .showcase-container {
+                flex-direction: column;
+            }
+            
+            .showcase-image {
+                order: -1;
+                transform: translateY(30px);
             }
         }
 
@@ -830,11 +814,11 @@
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .hero p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             
             .download-stats {
@@ -865,6 +849,10 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
@@ -875,11 +863,11 @@
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
                     <div>
-                        <div class="logo-text">EduCare Pro</div>
-                        <div class="logo-subtitle">Цифровая образовательная платформа</div>
+                        <div class="logo-text">Образовательный Хаб</div>
+                        <div class="logo-subtitle">Платформа для педагогов</div>
                     </div>
                 </div>
                 <div class="mobile-menu">
@@ -888,9 +876,9 @@
                 <nav>
                     <ul>
                         <li><a href="#features" class="active">Возможности</a></li>
-                        <li><a href="#stats">Преимущества</a></li>
-                        <li><a href="#ai">ИИ-помощник</a></li>
-                        <li><a href="#gallery">Интерфейс</a></li>
+                        <li><a href="#app">О приложении</a></li>
+                        <li><a href="#screenshots">Скриншоты</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
                         <li><a href="#faq">Вопросы</a></li>
                         <li><a href="#download">Скачать</a></li>
                     </ul>
@@ -903,20 +891,20 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Инновационная платформа для педагогов</h1>
-                <p>Объединяем передовые технологии и педагогический опыт для создания эффективной образовательной среды</p>
-                <a href="Педагог 24.7 v4.5.apk" class="cta-button" download="EduCare_Pro_v4.5.apk">
-                    <i class="fas fa-download"></i> Скачать APK
+                <h1>Инновационная платформа для современного образования</h1>
+                <p>Объединяем передовые технологии, методические материалы и сообщество педагогов для создания эффективной образовательной среды нового поколения</p>
+                <a href="education_hub.apk" class="cta-button" download="Education_Hub.apk">
+                    <i class="fas fa-download"></i> Скачать приложение
                 </a>
                 <div class="app-badge">
                     <div class="badge">
-                        <i class="fas fa-users"></i> Для воспитателей
+                        <i class="fas fa-rocket"></i> Инновационный подход
                     </div>
                     <div class="badge">
-                        <i class="fas fa-chalkboard-teacher"></i> Для учителей
+                        <i class="fas fa-users"></i> Сообщество экспертов
                     </div>
                     <div class="badge">
-                        <i class="fas fa-robot"></i> ИИ-помощник
+                        <i class="fas fa-graduation-cap"></i> Профессиональное развитие
                     </div>
                 </div>
             </div>
@@ -927,49 +915,47 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-title">
-                <h2>Все для эффективной работы</h2>
-                <p>EduCare Pro объединяет все необходимые инструменты и материалы для педагогов</p>
+                <h2>Мощные возможности для педагогов</h2>
+                <p>Инструменты, которые экономят время и повышают эффективность образовательного процесса</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon educator-icon">
-                        <i class="fas fa-child"></i>
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
                     </div>
-                    <h3>Для воспитателей детского сада</h3>
+                    <h3>Библиотека материалов</h3>
                     <ul class="feature-list">
-                        <li>Методички и конспекты занятий по возрастным группам</li>
-                        <li>Сценарии утренников, праздников, театрализованных игр</li>
-                        <li>Идеи поделок, аппликаций и творческих занятий</li>
-                        <li>Подвижные игры для малышей</li>
-                        <li>Документы и шаблоны: планы, журналы, отчёты</li>
-                        <li>Родительские уголки (плакаты, памятки, презентации)</li>
+                        <li>Более 5000 готовых конспектов уроков</li>
+                        <li>Методические разработки по всем предметам</li>
+                        <li>Интерактивные презентации и задания</li>
+                        <li>Регулярное обновление контента</li>
+                        <li>Возможность добавлять собственные материалы</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon teacher-icon">
-                        <i class="fas fa-user-graduate"></i>
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Для учителей начальных классов</h3>
+                    <h3>Искусственный интеллект</h3>
                     <ul class="feature-list">
-                        <li>Конспекты уроков по основным предметам</li>
-                        <li>Презентации и раздаточные материалы</li>
-                        <li>Классные часы (сценарии, темы, обсуждения)</li>
-                        <li>Игры и задания для вовлечения детей</li>
-                        <li>Документы: поурочные планы, отчёты, журналы</li>
+                        <li>Генерация индивидуальных планов уроков</li>
+                        <li>Автоматическая проверка заданий</li>
+                        <li>Анализ успеваемости учащихся</li>
+                        <li>Рекомендации по улучшению методик</li>
+                        <li>Персональный помощник педагога</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon subject-icon">
-                        <i class="fas fa-palette"></i>
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Для учителей-предметников</h3>
+                    <h3>Аналитика и отчетность</h3>
                     <ul class="feature-list">
-                        <li>ИЗО: готовые задания, идеи для уроков, пошаговые инструкции</li>
-                        <li>Музыка: сценарии праздников, подборки песен и игр</li>
-                        <li>Физкультура: комплексы упражнений, эстафеты, подвижные игры</li>
-                        <li>Технология/труд: поделки, схемы, идеи проектов</li>
-                        <li>Математика: карточки с заданиями, игры на счёт</li>
-                        <li>Естествознание: опыты и простые эксперименты</li>
+                        <li>Детальная статистика успеваемости</li>
+                        <li>Автоматическое формирование отчетов</li>
+                        <li>Визуализация образовательных результатов</li>
+                        <li>Сравнительный анализ по классам</li>
+                        <li>Интеграция с электронными журналами</li>
                     </ul>
                 </div>
             </div>
@@ -980,110 +966,145 @@
     <section class="stats" id="stats">
         <div class="container">
             <div class="section-title">
-                <h2>EduCare Pro в цифрах</h2>
-                <p>Реальные преимущества, которые оценили тысячи педагогов</p>
+                <h2>Образовательный Хаб в цифрах</h2>
+                <p>Платформа, которой доверяют тысячи педагогов по всей стране</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="87" data-suffix="%">0%</span>
-                    <div class="stat-label">экономят время на подготовке</div>
+                    <span class="stat-number" data-target="15400" data-suffix="+">0</span>
+                    <div class="stat-label">активных пользователей</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="1500" data-suffix="+">0</span>
-                    <div class="stat-label">готовых материалов</div>
+                    <span class="stat-number" data-target="5200" data-suffix="+">0</span>
+                    <div class="stat-label">образовательных материалов</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="12000" data-suffix="+">0</span>
-                    <div class="stat-label">педагогов используют</div>
+                    <span class="stat-number" data-target="96" data-suffix="%">0%</span>
+                    <div class="stat-label">довольных педагогов</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="4.8">0</span>
-                    <div class="stat-label">средний рейтинг</div>
+                    <span class="stat-number" data-target="4.9">0</span>
+                    <div class="stat-label">средний рейтинг приложения</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI Section -->
-    <section class="ai-section" id="ai">
+    <!-- App Showcase -->
+    <section class="app-showcase" id="app">
         <div class="container">
-            <div class="section-title">
-                <h2>Искусственный интеллект в помощь педагогу</h2>
-                <p>Новейшая технология для экономии времени и повышения эффективности</p>
-            </div>
-            <div class="ai-features">
-                <div class="ai-feature">
-                    <i class="fas fa-clipboard-list"></i>
-                    <h3>Составляет планы занятий</h3>
-                    <p>Автоматически генерирует подробные планы уроков и занятий</p>
+            <div class="showcase-container">
+                <div class="showcase-content">
+                    <h2>Интуитивный интерфейс для эффективной работы</h2>
+                    <p>Образовательный Хаб разработан с учетом потребностей современных педагогов. Простой и понятный интерфейс позволяет быстро освоить все функции платформы и сосредоточиться на главном - качестве образования.</p>
+                    
+                    <ul class="showcase-features">
+                        <li><i class="fas fa-check-circle"></i> Персонализированная лента материалов</li>
+                        <li><i class="fas fa-check-circle"></i> Умный поиск по тысячам ресурсов</li>
+                        <li><i class="fas fa-check-circle"></i> Интеграция с популярными образовательными сервисами</li>
+                        <li><i class="fas fa-check-circle"></i> Офлайн-доступ к избранным материалам</li>
+                        <li><i class="fas fa-check-circle"></i> Регулярные обновления и новые функции</li>
+                    </ul>
+                    
+                    <a href="education_hub.apk" class="cta-button" download="Education_Hub.apk">
+                        <i class="fas fa-download"></i> Попробовать бесплатно
+                    </a>
                 </div>
-                <div class="ai-feature">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Подбирает игры и упражнения</h3>
-                    <p>Находит подходящие активности для конкретного возраста и темы</p>
-                </div>
-                <div class="ai-feature">
-                    <i class="fas fa-edit"></i>
-                    <h3>Адаптирует материалы</h3>
-                    <p>Помогает настроить контент под особенности вашей группы или класса</p>
-                </div>
-                <div class="ai-feature">
-                    <i class="fas fa-theater-masks"></i>
-                    <h3>Создает сценарии</h3>
-                    <p>Придумывает тексты для мероприятий, поздравлений и праздников</p>
+                <div class="showcase-image">
+                    <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Интерфейс приложения Образовательный Хаб">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
         <div class="container">
             <div class="section-title">
                 <h2>Интерфейс приложения</h2>
-                <p>Удобный и интуитивно понятный дизайн для комфортной работы</p>
+                <p>Удобный и современный дизайн, созданный для продуктивной работы</p>
             </div>
-            
-            <div class="gallery-container">
-                <div class="gallery-main">
-                    <img src="https://via.placeholder.com/800x450/4361ee/ffffff?text=Главный+экран+EduCare+Pro" alt="Главный экран" id="gallery-main">
-                </div>
-                <div class="gallery-thumbs">
-                    <div class="gallery-thumb active" data-image="https://via.placeholder.com/800x450/4361ee/ffffff?text=Главный+экран+EduCare+Pro">
-                        <img src="https://via.placeholder.com/100x56/4361ee/ffffff?text=1" alt="Главный экран">
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Главный экран приложения">
                     </div>
-                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/7209b7/ffffff?text=Библиотека+материалов">
-                        <img src="https://via.placeholder.com/100x56/7209b7/ffffff?text=2" alt="Библиотека материалов">
-                    </div>
-                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/f72585/ffffff?text=ИИ+помощник">
-                        <img src="https://via.placeholder.com/100x56/f72585/ffffff?text=3" alt="ИИ помощник">
-                    </div>
-                    <div class="gallery-thumb" data-image="https://via.placeholder.com/800x450/4895ef/ffffff?text=Планы+и+конспекты">
-                        <img src="https://via.placeholder.com/100x56/4895ef/ffffff?text=4" alt="Планы и конспекты">
+                    <div class="screenshot-content">
+                        <h3>Персонализированная лента</h3>
+                        <p>Умная система рекомендует материалы на основе ваших предпочтений и предметной области</p>
                     </div>
                 </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Библиотека материалов">
+                    </div>
+                    <div class="screenshot-content">
+                        <h3>Обширная библиотека</h3>
+                        <p>Быстрый доступ к тысячам методических материалов, отсортированных по категориям</p>
+                    </div>
+                </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Аналитика и отчеты">
+                    </div>
+                    <div class="screenshot-content">
+                        <h3>Детальная аналитика</h3>
+                        <p>Визуализация данных об успеваемости и автоматическое формирование отчетов</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="interface-features">
-                <div class="interface-feature">
-                    <i class="fas fa-magic"></i>
-                    <h3>Интуитивный дизайн</h3>
-                    <p>Простой и понятный интерфейс для быстрого освоения</p>
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Отзывы педагогов</h2>
+                <p>Что говорят пользователи об Образовательном Хабе</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Образовательный Хаб кардинально изменил мой подход к подготовке уроков. Теперь я трачу на это в 3 раза меньше времени, а качество материалов стало значительно выше."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            АС
+                        </div>
+                        <div class="author-info">
+                            <h4>Анна Смирнова</h4>
+                            <p>Учитель начальных классов</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="interface-feature">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Быстрая навигация</h3>
-                    <p>Мгновенный доступ ко всем материалам и функциям</p>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Искусственный интеллект в приложении - это не просто модная функция, а реальный помощник. Он предлагает интересные идеи для уроков, которые я бы сама не придумала."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            МК
+                        </div>
+                        <div class="author-info">
+                            <h4>Мария Козлова</h4>
+                            <p>Преподаватель английского языка</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="interface-feature">
-                    <i class="fas fa-palette"></i>
-                    <h3>Персонализация</h3>
-                    <p>Настройте интерфейс под свои предпочтения</p>
-                </div>
-                <div class="interface-feature">
-                    <i class="fas fa-search"></i>
-                    <h3>Умный поиск</h3>
-                    <p>Быстрый поиск по тысячам материалов</p>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Сообщество педагогов в приложении - это бесценный ресурс. Обмен опытом, совместные проекты, обсуждение методик - все это помогает профессионально расти."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            ДП
+                        </div>
+                        <div class="author-info">
+                            <h4>Дмитрий Петров</h4>
+                            <p>Учитель информатики</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1094,25 +1115,25 @@
         <div class="container">
             <div class="section-title">
                 <h2>Часто задаваемые вопросы</h2>
-                <p>Ответы на самые популярные вопросы о приложении</p>
+                <p>Ответы на самые популярные вопросы о платформе</p>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Как часто обновляются материалы в приложении?</span>
+                        <span>Как часто обновляется контент в приложении?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Мы еженедельно добавляем новые конспекты, сценарии и методические материалы. Кроме того, наши пользователи регулярно получают обновления с новыми функциями и улучшениями интерфейса.</p>
+                        <p>Мы ежедневно добавляем новые материалы от наших экспертов и партнеров. Кроме того, еженедельно выходят крупные обновления с новыми функциями и улучшениями. Все пользователи получают уведомления о новых материалах, релевантных их предметной области.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Можно ли использовать приложение без интернета?</span>
+                        <span>Можно ли использовать приложение без подключения к интернету?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Да, после загрузки материалов вы можете использовать их в офлайн-режиме. Исключение составляет функция ИИ-помощника, которая требует подключения к интернету.</p>
+                        <p>Да, вы можете скачивать материалы для офлайн-использования. После загрузки контента он будет доступен без подключения к интернету. Исключение составляют функции, требующие обработки данных в реальном времени, такие как ИИ-помощник и синхронизация между устройствами.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1121,58 +1142,16 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Да, мы предлагаем бесплатную версию с базовым набором функций и материалов. Премиум-версия открывает доступ ко всем материалам и расширенным функциям ИИ-помощника.</p>
+                        <p>Да, мы предлагаем бесплатную версию с базовым набором функций, которая включает доступ к ограниченному количеству материалов и основным инструментам. Премиум-версия открывает полный доступ ко всем ресурсам платформы, расширенным функциям ИИ-помощника и приоритетную техническую поддержку.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Как работает ИИ-помощник?</span>
+                        <span>Как работает ИИ-помощник в приложении?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Наш ИИ-помощник использует передовые алгоритмы для анализа ваших потребностей и создания персонализированных материалов. Он может генерировать планы уроков, подбирать игры и упражнения, адаптировать контент под возрастные особенности детей.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Knowledge Base -->
-    <section class="knowledge" id="knowledge">
-        <div class="container">
-            <div class="section-title">
-                <h2>База знаний</h2>
-                <p>Полезные статьи и руководства для педагогов</p>
-            </div>
-            <div class="knowledge-grid">
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="knowledge-content">
-                        <h3>5 способов использовать ИИ в подготовке к урокам</h3>
-                        <p>Узнайте, как искусственный интеллект может сэкономить вам время и улучшить качество занятий.</p>
-                        <a href="#" class="knowledge-link">Читать статью <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="knowledge-content">
-                        <h3>Эффективное взаимодействие с родителями</h3>
-                        <p>Практические советы по организации родительских собраний и индивидуальных консультаций.</p>
-                        <a href="#" class="knowledge-link">Читать статью <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="knowledge-content">
-                        <h3>Игровые технологии в современном образовании</h3>
-                        <p>Как использовать игровые методики для повышения мотивации и вовлеченности учащихся.</p>
-                        <a href="#" class="knowledge-link">Читать статью <i class="fas fa-arrow-right"></i></a>
+                        <p>Наш ИИ-помощник использует передовые алгоритмы машинного обучения для анализа ваших потребностей и создания персонализированных материалов. Он может генерировать планы уроков, подбирать игры и упражнения, адаптировать контент под возрастные особенности детей, проверять задания и предоставлять аналитику по успеваемости учащихся.</p>
                     </div>
                 </div>
             </div>
@@ -1183,22 +1162,22 @@
     <section class="download" id="download">
         <div class="container">
             <div class="download-content">
-                <h2>Скачайте EduCare Pro бесплатно</h2>
-                <p>Присоединяйтесь к тысячам педагогов, которые уже используют наше приложение в своей работе</p>
-                <a href="Педагог 24.7 v4.5.apk" class="cta-button" download="EduCare_Pro_v4.5.apk">
-                    <i class="fas fa-download"></i> Скачать APK (v4.5)
+                <h2>Начните использовать Образовательный Хаб сегодня</h2>
+                <p>Присоединяйтесь к сообществу прогрессивных педагогов, которые уже используют нашу платформу для повышения эффективности своей работы</p>
+                <a href="education_hub.apk" class="cta-button" download="Education_Hub.apk">
+                    <i class="fas fa-download"></i> Скачать приложение
                 </a>
                 <div class="download-stats">
                     <div class="stat">
-                        <div class="stat-number">12K+</div>
+                        <div class="stat-number">15K+</div>
                         <div class="stat-label">Педагогов</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">1.5K+</div>
+                        <div class="stat-number">5K+</div>
                         <div class="stat-label">Материалов</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">4.8</div>
+                        <div class="stat-number">4.9</div>
                         <div class="stat-label">Рейтинг</div>
                     </div>
                 </div>
@@ -1211,8 +1190,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>EduCare Pro</h3>
-                    <p>Инновационная образовательная платформа для воспитателей и учителей, созданная чтобы облегчить вашу работу и вдохновить на новые достижения.</p>
+                    <h3>Образовательный Хаб</h3>
+                    <p>Инновационная платформа для современных педагогов, объединяющая передовые технологии, методические материалы и профессиональное сообщество.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-vk"></i></a>
                         <a href="#"><i class="fab fa-telegram"></i></a>
@@ -1224,35 +1203,35 @@
                     <h3>Разделы</h3>
                     <ul class="footer-links">
                         <li><a href="#features">Возможности</a></li>
-                        <li><a href="#stats">Преимущества</a></li>
-                        <li><a href="#ai">ИИ-помощник</a></li>
-                        <li><a href="#gallery">Интерфейс</a></li>
+                        <li><a href="#app">О приложении</a></li>
+                        <li><a href="#screenshots">Скриншоты</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
                         <li><a href="#faq">Вопросы</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Поддержка</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Помощь</a></li>
-                        <li><a href="#">Частые вопросы</a></li>
+                        <li><a href="#">Центр помощи</a></li>
+                        <li><a href="#">Сообщество</a></li>
                         <li><a href="#">Обратная связь</a></li>
                         <li><a href="#">Контакты</a></li>
                         <li><a href="#">Политика конфиденциальности</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Дополнительно</h3>
+                    <h3>Ресурсы</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Коллекция редких книг</a></li>
-                        <li><a href="#">Методические пособия</a></li>
-                        <li><a href="#">Сообщество педагогов</a></li>
-                        <li><a href="#">Регулярные обновления</a></li>
-                        <li><a href="#">Новые материалы</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Вебинары</a></li>
+                        <li><a href="#">Методические материалы</a></li>
+                        <li><a href="#">Курсы повышения квалификации</a></li>
+                        <li><a href="#">Партнерская программа</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 EduCare Pro. Все права защищены.</p>
+                <p>&copy; 2023 Образовательный Хаб. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -1281,24 +1260,6 @@
                     // Close mobile menu if open
                     document.querySelector('nav').classList.remove('active');
                 }
-            });
-        });
-
-        // Gallery functionality
-        const galleryThumbs = document.querySelectorAll('.gallery-thumb');
-        const galleryMain = document.getElementById('gallery-main');
-        
-        galleryThumbs.forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                // Remove active class from all thumbs
-                galleryThumbs.forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked thumb
-                this.classList.add('active');
-                
-                // Change main image
-                const newImage = this.getAttribute('data-image');
-                galleryMain.src = newImage;
             });
         });
 
@@ -1347,7 +1308,7 @@
                     const easeProgress = 1 - Math.pow(1 - progress, 3);
                     
                     let currentValue;
-                    if (target === 4.8) {
+                    if (target === 4.9) {
                         currentValue = (target * easeProgress).toFixed(1);
                     } else {
                         currentValue = Math.floor(target * easeProgress);
@@ -1359,7 +1320,7 @@
                         requestAnimationFrame(updateNumber);
                     } else {
                         // Final value
-                        if (target === 4.8) {
+                        if (target === 4.9) {
                             statNumber.textContent = target.toFixed(1) + suffix;
                         } else {
                             statNumber.textContent = target + suffix;
@@ -1387,7 +1348,7 @@
         const animatedElements = new Set();
 
         function checkVisibility() {
-            const elements = document.querySelectorAll('.feature-card, .ai-feature, .faq-item, .knowledge-card, .stat-item, .interface-feature');
+            const elements = document.querySelectorAll('.feature-card, .testimonial-card, .faq-item, .screenshot-card, .stat-item, .showcase-image');
             
             elements.forEach(el => {
                 if (isElementInViewport(el) && !animatedElements.has(el)) {
